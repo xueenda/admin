@@ -1,13 +1,9 @@
 <template>
   <div class="dashboard-editor-container">
-    <github-corner></github-corner>
-
     <panel-group @handleSetLineChartData="handleSetLineChartData"></panel-group>
-
     <el-row style="background:#fff;padding:16px 16px 0;margin-bottom:32px;">
       <line-chart :chart-data="lineChartData"></line-chart>
     </el-row>
-
     <el-row :gutter="32">
       <el-col :xs="24" :sm="24" :lg="8">
         <div class="chart-wrapper">
@@ -25,7 +21,6 @@
         </div>
       </el-col>
     </el-row>
-
     <el-row :gutter="8">
       <el-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 12}" :xl="{span: 12}" style="padding-right:8px;margin-bottom:30px;">
         <transaction-table></transaction-table>
@@ -37,12 +32,9 @@
         <box-card></box-card>
       </el-col>
     </el-row>
-
   </div>
 </template>
-
 <script>
-import GithubCorner from '@/components/GithubCorner'
 import PanelGroup from './components/PanelGroup'
 import LineChart from './components/LineChart'
 import RaddarChart from './components/RaddarChart'
@@ -74,7 +66,6 @@ const lineChartData = {
 export default {
   name: 'dashboard-admin',
   components: {
-    GithubCorner,
     PanelGroup,
     LineChart,
     RaddarChart,
@@ -95,8 +86,8 @@ export default {
     }
   }
 }
-</script>
 
+</script>
 <style rel="stylesheet/scss" lang="scss" scoped>
 .dashboard-editor-container {
   padding: 32px;
@@ -107,4 +98,6 @@ export default {
     margin-bottom: 32px;
   }
 }
+
 </style>
+

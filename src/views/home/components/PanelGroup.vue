@@ -6,7 +6,7 @@
           <svg-icon icon-class="peoples" class-name="card-panel-icon" />
         </div>
         <div class="card-panel-description">
-          <div class="card-panel-text">New Visits</div>
+          <div class="card-panel-text">{{$t('panelGroup.newVisits')}}</div>
           <count-to class="card-panel-num" :startVal="0" :endVal="102400" :duration="2600"></count-to>
         </div>
       </div>
@@ -17,7 +17,7 @@
           <svg-icon icon-class="message" class-name="card-panel-icon" />
         </div>
         <div class="card-panel-description">
-          <div class="card-panel-text">Messages</div>
+          <div class="card-panel-text">{{$t('panelGroup.messages')}}</div>
           <count-to class="card-panel-num" :startVal="0" :endVal="81212" :duration="3000"></count-to>
         </div>
       </div>
@@ -28,7 +28,7 @@
           <svg-icon icon-class="money" class-name="card-panel-icon" />
         </div>
         <div class="card-panel-description">
-          <div class="card-panel-text">Purchases</div>
+          <div class="card-panel-text">{{$t('panelGroup.purchases')}}</div>
           <count-to class="card-panel-num" :startVal="0" :endVal="9280" :duration="3200"></count-to>
         </div>
       </div>
@@ -39,14 +39,13 @@
           <svg-icon icon-class="shoppingCard" class-name="card-panel-icon" />
         </div>
         <div class="card-panel-description">
-          <div class="card-panel-text">Shoppings</div>
+          <div class="card-panel-text">{{$t('panelGroup.shoppings')}}</div>
           <count-to class="card-panel-num" :startVal="0" :endVal="13600" :duration="3600"></count-to>
         </div>
       </div>
     </el-col>
   </el-row>
 </template>
-
 <script>
 import CountTo from 'vue-count-to'
 
@@ -60,12 +59,12 @@ export default {
     }
   }
 }
-</script>
 
+</script>
 <style rel="stylesheet/scss" lang="scss" scoped>
 .panel-group {
   margin-top: 18px;
-  .card-panel-col{
+  .card-panel-col {
     margin-bottom: 32px;
   }
   .card-panel {
@@ -83,7 +82,7 @@ export default {
         color: #fff;
       }
       .icon-people {
-         background: #40c9c6;
+        background: #40c9c6;
       }
       .icon-message {
         background: #36a3f7;
@@ -135,4 +134,6 @@ export default {
     }
   }
 }
+
 </style>
+
