@@ -1,7 +1,6 @@
 <template>
   <div :class="className" :id="id" :style="{height:height,width:width}"></div>
 </template>
-
 <script>
 import echarts from 'echarts'
 import resize from './mixins/resize'
@@ -47,14 +46,14 @@ export default {
       const xData = (function() {
         const data = []
         for (let i = 1; i < 13; i++) {
-          data.push(i + 'month')
+          data.push(i + '月')
         }
         return data
       }())
       this.chart.setOption({
         backgroundColor: '#344b58',
         title: {
-          text: 'statistics',
+          text: '积分统计数据',
           x: '20',
           top: '20',
           textStyle: {
@@ -88,7 +87,7 @@ export default {
           textStyle: {
             color: '#90979c'
           },
-          data: ['female', 'male', 'average']
+          data: ['发放积分', '兑换积分', '平均']
         },
         calculable: true,
         xAxis: [{
@@ -149,7 +148,8 @@ export default {
 
           },
           textStyle: {
-            color: '#fff' },
+            color: '#fff'
+          },
           borderColor: '#90979c'
 
         }, {
@@ -160,7 +160,7 @@ export default {
           end: 35
         }],
         series: [{
-          name: 'female',
+          name: '发放积分',
           type: 'bar',
           stack: 'total',
           barMaxWidth: 35,
@@ -197,7 +197,7 @@ export default {
         },
 
         {
-          name: 'male',
+          name: '兑换积分',
           type: 'bar',
           stack: 'total',
           itemStyle: {
@@ -228,7 +228,7 @@ export default {
             220
           ]
         }, {
-          name: 'average',
+          name: '平均',
           type: 'line',
           stack: 'total',
           symbolSize: 10,
@@ -260,10 +260,11 @@ export default {
             2865,
             4298
           ]
-        }
-        ]
+        }]
       })
     }
   }
 }
+
 </script>
+

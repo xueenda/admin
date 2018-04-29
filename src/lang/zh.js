@@ -1,10 +1,11 @@
 export default {
   route: {
     home: '首页',
-    points: '积分明细',
+    points: '积分统计',
     transaction: '交易记录',
+    redeem: '积分兑换',
     customer: '客户信息',
-    coupon: '折扣活动',
+    coupon: '兑换规则',
     settings: '设置'
   },
   navbar: {
@@ -29,9 +30,9 @@ export default {
     documentation: '文档介绍'
   },
   panelGroup: {
-    newVisits: '新用户',
-    messages: '消息',
-    purchases: '购买',
-    shoppings: '购物'
+    newVisits: '用户',
+    messages: '新用户',
+    purchases: '销售额',
+    shoppings: '积分'
   }
 }

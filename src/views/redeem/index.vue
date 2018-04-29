@@ -9,10 +9,9 @@
       </el-table-column>
       <el-table-column prop='product' label='商品'>
       </el-table-column>
-      <el-table-column prop='amount' label='金额'>
+      <el-table-column prop='amount' label='消耗积分'>
       </el-table-column>
     </el-table>
-    <span class="text-small">注: ￥1元消费 = 10个积分</span>
     <el-pagination small layout="prev, pager, next" :total="50">
     </el-pagination>
   </div>

@@ -62,7 +62,6 @@ export const asyncRouterMap = [
       meta: { title: 'points', icon: 'icon', noCache: true }
     }]
   },
-
   {
     path: '/transaction',
     component: Layout,
@@ -73,7 +72,16 @@ export const asyncRouterMap = [
       meta: { title: 'transaction', icon: 'table', noCache: true }
     }]
   },
-
+  {
+    path: '/redeem',
+    component: Layout,
+    children: [{
+      path: 'index',
+      component: _import('redeem/index'),
+      name: 'redeem',
+      meta: { title: 'redeem', icon: 'example', noCache: true }
+    }]
+  },
   {
     path: '/customer',
     component: Layout,
@@ -93,7 +101,6 @@ export const asyncRouterMap = [
       }
     }]
   },
-
   {
     path: '/coupon',
     component: Layout,
@@ -105,16 +112,15 @@ export const asyncRouterMap = [
       meta: { title: 'coupon', icon: 'theme' }
     }]
   },
-  {
-    path: '/settings',
-    component: Layout,
-    children: [{
-      path: 'index',
-      component: _import('settings/index'),
-      name: 'settings',
-      meta: { title: 'settings', icon: 'international' }
-    }]
-  },
-
+  // {
+  //   path: '/settings',
+  //   component: Layout,
+  //   children: [{
+  //     path: 'index',
+  //     component: _import('settings/index'),
+  //     name: 'settings',
+  //     meta: { title: 'settings', icon: 'international' }
+  //   }]
+  // },
   { path: '*', redirect: '/404', hidden: true }
 ]
