@@ -2,15 +2,17 @@
   // 主体区域
   .main-container {
     min-height: 100%;
-    transition: margin-left .28s;
-    margin-left: 180px;
+    transition: transform .28s;
+    transform: translate3d(180px, 0, 0);
+    width: calc(100vw - 180px);
   }
   // 侧边栏
   .sidebar-container {
     .horizontal-collapse-transition {
       transition: 0s width ease-in-out, 0s padding-left ease-in-out, 0s padding-right ease-in-out;
     }
-    transition: width .28s;
+    transition: transform .28s;
+    transform: translate3d(0, 0, 0);
     width: 180px !important;
     height: 100%;
     position: fixed;
@@ -37,7 +39,8 @@
       width: 36px !important;
     }
     .main-container {
-      margin-left: 36px;
+      transform: translate3d(36px, 0, 0);
+      width: calc(100vw - 36px);
     }
     .submenu-title-noDropdown {
       padding-left: 10px !important;
